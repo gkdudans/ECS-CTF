@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+</head>
+<body>
+    <h1>Change Password</h1>
+    
+    <form method="POST" action="/changepw">
+        <label for="userid">Username:</label>
+        <input type="text" id="userid" name="userid" required>
+        
+        <label for="userpw">New Password:</label>
+        <input type="text" id="userpw" name="userpw" required>
+        
+        <button type="submit">Change Password</button>
+    </form>
+
+    <p>
+        {% if msg == "false" %}
+            <strong>Password change unsuccessful. Please try again.</strong>
+        {% else %}
+            <strong>Password changed successfully!</strong>
+        {% endif %}
+    </p>
+</body>
+</html>
